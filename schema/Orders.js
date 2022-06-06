@@ -28,7 +28,20 @@ cube(`Orders`, {
     title: {
       sql: `title`,
       type: `string`
-    }
+    },
+    location: {
+      type: `geo`,
+      latitude: {
+        sql: `${CUBE}.lat`,
+      },
+      longitude: {
+        sql: `${CUBE}.lon`,
+      },
+    },
+    h3_9: {
+      sql: `h3_9`,
+      type: `string`
+    },
   },
   dataSource: `default`,
 });

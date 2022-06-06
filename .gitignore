@@ -1,2 +1,5 @@
 node_modules/
+postgres-data/
 package-lock.json
+.cubestore/
+.idea/
