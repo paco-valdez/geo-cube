@@ -69,7 +69,7 @@ cube(`NearbyOrders`, {
 });
 ```
 First we define how we are going to join the cubes geographically.
-We are "rolling up" the resolution of the hash from 9 to 4, 
+We are "rolling down" the resolution of the hash from 9 to 4, 
 to identify which orders are nearby to every Vendor. 
 Imagine we would like to know all the possible opportunities for each vendor.
 This method is several orders of magnitude faster than [ST_DWithin](https://postgis.net/docs/ST_DWithin.html).
