@@ -5,6 +5,10 @@ cube(`Orders`, {
     ordersByVendor: {
       measures: [Orders.count],
       dimensions: [Vendors.name]
+    },
+    ordersByH3: {
+      measures: [Orders.count],
+      dimensions: [Orders.h3_5]
     }
   },
 
@@ -40,6 +44,10 @@ cube(`Orders`, {
     },
     h3_9: {
       sql: `h3_9`,
+      type: `string`
+    },
+    h3_5: {
+      sql: `substring(${CUBE}.h3_9, 1, 6)`,
       type: `string`
     },
   },
