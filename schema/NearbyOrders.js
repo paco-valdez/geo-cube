@@ -4,7 +4,7 @@ cube(`NearbyOrders`, {
   joins: {
     Vendors: {
       sql: `substring(${CUBE}.h3_9, 1, 4) = substring(${Vendors}.h3_9, 1, 4)`,
-      relationship: `belongsTo`
+      relationship: `hasMany`
     }
   },
 
